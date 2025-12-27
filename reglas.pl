@@ -17,18 +17,42 @@ cancionesDelAnio(Anio, Lista) :- findall(Cancion, (album(Album, Anio, _), cancio
 participoEn(Artista, Grupo) :- artista(Artista), artista(Grupo), parteDe(Artista, Grupo).
 
 %filtros por año X = rango inferior Y = rango superior X = año del album
-filtrarAlbumesPorAnio(X, Y, Lista) :- findall(Album, (album(Album, Z, _), Z > X, Z < Y), Lista), !. %este es un filtro para un rango de años
+filtrarAlbumesPorAnio(X, Y, Lista) :- findall(Album, (album(Album, Z, _), Z >= X, Z =< Y), Lista), !. %este es un filtro para un rango de años
+albumesPorDecada(Decada, L) :- decada(Decada, X, Y), filtrarAlbumesPorAnio(X, Y, L), !. 
+cancionesPorDecada(Decada, ListaCanciones) :- 
+    albumesPorDecada(Decada, ListaAlbumes),
+    findall(Cancion
+        , (member(
+            Album, ListaAlbumes), 
+            cancion(Cancion, Album))
+        , ListaCanciones), !.
+
 
 %reglas para los me gusta
 generosEscuchados(Lista) :- findall(Genero,     
 (meGusta(X), 
     (
-        (artista(X), genero(X, Genero)); 
+        (artista(X), genero(X, Genero));  
         (album(X, _, _), genero(X, Genero)); 
         (cancion(X, _), genero(X, Genero))
     )
 ), 
 Lista), !.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

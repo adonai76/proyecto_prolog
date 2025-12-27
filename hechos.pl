@@ -27,6 +27,11 @@ parteDe(phil_selway, radiohead).
 parteDe(jonny_greenwood, radiohead).
 parteDe(jonny_greenwood, the_smile).
 
+%decadas solamente como hecho
+decada(ochentas, 1980, 1989).
+decada(noventas, 1990, 1999).
+decada(dosmilera, 2000, 2009).
+
 %albumes de muse
 album(showbiz, 1999, muse).
 album(origin_of_simmetry, 2001, muse).
