@@ -37,10 +37,17 @@ parteDe(phil_selway, radiohead).
 parteDe(jonny_greenwood, radiohead).
 parteDe(jonny_greenwood, the_smile).
 
+<<<<<<< HEAD
 parteDe(leon_larregui, zoe).
 parteDe(sergio_acosta, zoe).
 parteDe(angel_mosqueda, zoe).
 parteDe(rodrigo_guardiola, zoe).
+=======
+%decadas solamente como hecho
+decada(ochentas, 1980, 1989).
+decada(noventas, 1990, 1999).
+decada(dosmilera, 2000, 2009).
+>>>>>>> 574f274d76f86c67e2aba6514c005803a49c3b75
 
 %albumes de muse
 album(showbiz, 1999, muse).
@@ -338,6 +345,7 @@ meGusta(nirvana).
 meGusta(absolution).
 meGusta(nevermind).
 meGusta(time_is_running_out). 
+meGusta(idioteque).
 
 
 

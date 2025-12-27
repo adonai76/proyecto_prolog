@@ -17,21 +17,67 @@ cancionesDelAnio(Anio, Lista) :- findall(Cancion, (album(Album, Anio, _), cancio
 participoEn(Artista, Grupo) :- artista(Artista), artista(Grupo), parteDe(Artista, Grupo).
 
 %filtros por año X = rango inferior Y = rango superior X = año del album
-filtrarAlbumesPorAnio(X, Y, Lista) :- findall(Album, (album(Album, Z, _), Z > X, Z < Y), Lista), !. %este es un filtro para un rango de años
+filtrarAlbumesPorAnio(X, Y, Lista) :- findall(Album, (album(Album, Z, _), Z >= X, Z =< Y), Lista), !. %este es un filtro para un rango de años
+albumesPorDecada(Decada, L) :- decada(Decada, X, Y), filtrarAlbumesPorAnio(X, Y, L), !. 
+cancionesPorDecada(Decada, ListaCanciones) :- 
+    albumesPorDecada(Decada, ListaAlbumes),
+    findall(Cancion
+        , (member(
+            Album, ListaAlbumes), 
+            cancion(Cancion, Album))
+        , ListaCanciones), !.
 
 %reglas para los me gusta
-generosEscuchados(Lista) :- findall(Genero,     
+generosEscuchados(Lista) :- setof(Genero, X^Albumes^Album^AlbumCancion^     
 (meGusta(X), 
     (
-        (artista(X), genero(X, Genero)); 
+        (artista(X), albumesDe(X, Albumes), member(Album, Albumes), genero(Album, Genero));  
         (album(X, _, _), genero(X, Genero)); 
-        (cancion(X, _), genero(X, Genero))
+        (cancion(X, AlbumCancion), album(AlbumCancion, _, _), genero(AlbumCancion, Genero))
     )
 ), 
 Lista), !.
 
-%esto verifica que sea artista pero que no pertenezca a nignuna banda 
-esSolista(X) :-artista(X), \+ parteDe(X, _).
+% Reglas para los me gusta (CORREGIDA)
+generosEscuchados(Lista) :- 
+    findall(Genero,      
+        (
+            meGusta(X), 
+            (
+                % CASO 1: Si X es Artista -> Busca sus álbumes -> Luego el género del álbum
+                (artista(X), album(Album, _, X), genero(Album, Genero));  
+                
+                % CASO 2: Si X es Álbum -> Saca el género directo
+                (album(X, _, _), genero(X, Genero)); 
+                
+                % CASO 3: Si X es Canción -> Busca su álbum -> Luego el género del álbum
+                (cancion(X, Album), genero(Album, Genero))
+            )
+        ), 
+        ListaBruta
+    ), 
+    sort(ListaBruta, Lista). % sort elimina duplicados y ordena la lista final
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> yochi
 
 
 
