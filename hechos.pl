@@ -13,11 +13,13 @@ artista(angel_mosqueda).
 artista(rodrigo_guardiola).
 
 artista(tom_chaplin).
-artista(tim_rice-oxley).
+artista(tim_rice_oxley). % tim rice-oxley
 
 artista(thom_yorke).
 artista(jonny_greenwood).
 artista(phil_selway).
+
+artista(billy_corgan).
 
 %bandas y grupos
 artista(muse).
@@ -27,6 +29,7 @@ artista(radiohead).
 artista(the_smile).
 artista(zoe).
 artista(keane).
+artista(the_smashing_pumpkins).
 
 %relaciones entre artistas
 parteDe(matthew_bellamy, muse).
@@ -44,6 +47,8 @@ parteDe(jonny_greenwood, the_smile).
 
 parteDe(tom_chaplin, keane).
 parteDe(tim_rice-oxley, keane).
+
+parteDe(billy_corgan, the_smashing_pumpkins).
 
 parteDe(leon_larregui, zoe).
 parteDe(sergio_acosta, zoe).
@@ -104,6 +109,15 @@ album(a_light_for_attracting_attention, 2022, the_smile).
 album(hopes_and_fears, 2004, keane).
 album(under_the_iron_sea, 2006, keane).
 
+%albumes de the the smashing pumpkins
+album(siamese_dream, 1993, the_smashing_pumpkins).
+album(mellon_collie_and_the_infinite_sadness, 1995, the_smashing_pumpkins).
+
+%aqui van etiquetas
+tag(navidenas, showbiz).
+tag(navidenas, in_utero).
+tag(navidenas, origin_of_simmetry).
+
 %aqui para asignar genero a los albumes, artistas y canciones
 genero(showbiz, alternative_rock).
 genero(showbiz, new_prog).
@@ -162,6 +176,18 @@ genero(hopes_and_fears, britpop).
 genero(under_the_iron_sea, alternative_rock).
 genero(under_the_iron_sea, pop_rock).
 genero(under_the_iron_sea, britpop).
+
+genero(siamese_dream, alternative_rock).
+genero(siamese_dream, grunge).
+genero(siamese_dream, alternative_metal).
+genero(siamese_dream, indie_rock).
+genero(siamese_dream, hard_rock).
+%------------
+genero(mellon_collie_and_the_infinite_sadness, alternative_rock).
+genero(mellon_collie_and_the_infinite_sadness, grunge).
+genero(mellon_collie_and_the_infinite_sadness, alternative_metal).
+genero(mellon_collie_and_the_infinite_sadness, art_rock).
+genero(mellon_collie_and_the_infinite_sadness, heavy_metal).
 
 genero(cuidado, bossanova).
 genero(cuidado, jazz).
@@ -350,6 +376,49 @@ cancion(try_again, under_the_iron_sea).
 cancion(broken_toy, under_the_iron_sea).
 cancion(the_frog_prince, under_the_iron_sea). 
 
+cancion(cherub_rock, siamese_dream).
+cancion(quiet, siamese_dream).
+cancion(today, siamese_dream).
+cancion(hummer, siamese_dream).
+cancion(rocket, siamese_dream).
+cancion(disarm, siamese_dream).
+cancion(soma, siamese_dream).
+cancion(geek_usa, siamese_dream).       % geek u.s.a. -> atom: geek_usa     .
+cancion(mayonaise, siamese_dream).      % mayonaise (no error de sintaxis)
+cancion(spaceboy, siamese_dream).
+cancion(silverfuck, siamese_dream).
+cancion(sweet_sweet, siamese_dream).
+cancion(luna, siamese_dream).
+%------------
+cancion(mellon_collie_and_the_infinite_sadness, mellon_collie_and_the_infinite_sadness).
+cancion(tonight_tonight, mellon_collie_and_the_infinite_sadness).
+cancion(jellybelly, mellon_collie_and_the_infinite_sadness).
+cancion(zero, mellon_collie_and_the_infinite_sadness).
+cancion(here_is_no_why, mellon_collie_and_the_infinite_sadness).
+cancion(bullet_with_butterfly_wings, mellon_collie_and_the_infinite_sadness).
+cancion(to_forgive, mellon_collie_and_the_infinite_sadness).
+cancion(fuck_you_an_ode_to_no_one, mellon_collie_and_the_infinite_sadness). % caracter raro, ver comentario
+cancion(love, mellon_collie_and_the_infinite_sadness).
+cancion(cupid_de_locke, mellon_collie_and_the_infinite_sadness).
+cancion(galapogos, mellon_collie_and_the_infinite_sadness).
+cancion(muzzle, mellon_collie_and_the_infinite_sadness).
+cancion(porcelina_of_the_vast_oceans, mellon_collie_and_the_infinite_sadness).
+cancion(take_me_down, mellon_collie_and_the_infinite_sadness).
+cancion(where_boys_fear_to_tread, mellon_collie_and_the_infinite_sadness).
+cancion(bodies, mellon_collie_and_the_infinite_sadness).
+cancion(thirty_three, mellon_collie_and_the_infinite_sadness). % "Thirty-Three" -> thirty_three
+cancion(in_the_arms_of_sleep, mellon_collie_and_the_infinite_sadness).
+cancion(one_nine_seven_nine, mellon_collie_and_the_infinite_sadness). % 1979 no válido -> usar texto alterno
+cancion(tales_of_a_scorched_earth, mellon_collie_and_the_infinite_sadness).
+cancion(thru_the_eyes_of_ruby, mellon_collie_and_the_infinite_sadness).
+cancion(stumbleine, mellon_collie_and_the_infinite_sadness).
+cancion(x_y_u, mellon_collie_and_the_infinite_sadness).           % "X.Y.U." -> x_y_u
+cancion(we_only_come_out_at_night, mellon_collie_and_the_infinite_sadness).
+cancion(beautiful, mellon_collie_and_the_infinite_sadness).
+cancion(lily_my_one_and_only, mellon_collie_and_the_infinite_sadness). % "Lily (My One And Only)" -> lily_my_one_and_only
+cancion(by_starlight, mellon_collie_and_the_infinite_sadness).
+cancion(farewell_and_goodnight, mellon_collie_and_the_infinite_sadness).
+
 cancion(solo_una_mujer, cuidado).
 cancion(una_manana, cuidado).
 cancion(se_agradecera, cuidado).
@@ -530,7 +599,7 @@ cancion(paraiso_lunar, 00_00).
 cancion(00_00, 00_00).
 cancion(huracanes, 00_00).
 cancion(mapa_con_ana_torroja, 00_00).
-cancion('80_dias_con_carlos_sadness', 00_00).
+cancion(ochenta_dias_con_carlos_sadness, 00_00). %80 dias
 cancion(balsa, 00_00).
 cancion(suburbios, 00_00).
 cancion(no_es_antes_ni_es_despues, 00_00).
