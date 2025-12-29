@@ -5,6 +5,16 @@ artista(matthew_bellamy).
 
 artista(dave_grohl).
 
+artista(siddhartha).
+
+artista(leon_larregui).
+artista(sergio_acosta).
+artista(angel_mosqueda).
+artista(rodrigo_guardiola).
+
+artista(tom_chaplin).
+artista(tim_rice-oxley).
+
 artista(thom_yorke).
 artista(jonny_greenwood).
 artista(phil_selway).
@@ -15,6 +25,8 @@ artista(nirvana).
 artista(foo_fighters).
 artista(radiohead).
 artista(the_smile).
+artista(zoe).
+artista(keane).
 
 %relaciones entre artistas
 parteDe(matthew_bellamy, muse).
@@ -30,6 +42,14 @@ parteDe(phil_selway, radiohead).
 parteDe(jonny_greenwood, radiohead).
 parteDe(jonny_greenwood, the_smile).
 
+parteDe(tom_chaplin, keane).
+parteDe(tim_rice-oxley, keane).
+
+parteDe(leon_larregui, zoe).
+parteDe(sergio_acosta, zoe).
+parteDe(angel_mosqueda, zoe).
+parteDe(rodrigo_guardiola, zoe).
+
 %decadas solamente como hecho
 decada(sesentas, 1960, 19690).
 decada(setentas, 1970, 1979).
@@ -42,6 +62,22 @@ decada(dosmildiez, 2010, 2019).
 album(showbiz, 1999, muse).
 album(origin_of_simmetry, 2001, muse).
 album(absolution, 2003, muse).
+
+%albumes de zoe
+album(zoe, 2001, zoe).
+album(rocanlover, 2003, zoe).
+album(memo_rex_commander_y_el_corazon_atomico_de_la_via_lactea, 2006, zoe).
+album(programaton, 2013, zoe).
+album(aztlan, 2018, zoe).
+album(sonidos_de_karmatica_resonancia, 2021, zoe).
+
+%albumes de siddhartha
+album(why_you, 2008, siddhartha).
+album(naufrago, 2011, siddhartha).
+album(el_vuelo_del_pez, 2014, siddhartha).
+album(unicos, 2016, siddhartha).
+album(memoria_futuro, 2019, siddhartha).
+album(00_00, 2022, siddhartha).
 
 %albumes de jose jose
 album(cuidado, 1969, jose_jose).
@@ -62,7 +98,11 @@ album(ok_computer, 1997, radiohead).
 album(kid_a, 2000, radiohead).
 
 %albumes de the smile
-album(a_light_for_attracting_attention, the_smile).
+album(a_light_for_attracting_attention, 2022, the_smile).
+
+%albumes de keane
+album(hopes_and_fears, 2004, keane).
+album(under_the_iron_sea, 2006, keane).
 
 %aqui para asignar genero a los albumes, artistas y canciones
 genero(showbiz, alternative_rock).
@@ -113,6 +153,15 @@ genero(a_light_for_attracting_attention, art_rock).
 genero(a_light_for_attracting_attention, electronica).
 genero(a_light_for_attracting_attention, post-punk).
 genero(a_light_for_attracting_attention, progressive_rock).
+
+genero(hopes_and_fears, alternative_rock).
+genero(hopes_and_fears, piano_rock).
+genero(hopes_and_fears, pop_rock).
+genero(hopes_and_fears, britpop).
+%------------
+genero(under_the_iron_sea, alternative_rock).
+genero(under_the_iron_sea, pop_rock).
+genero(under_the_iron_sea, britpop).
 
 genero(cuidado, bossanova).
 genero(cuidado, jazz).
@@ -275,6 +324,32 @@ cancion(waving_a_white_flag, a_light_for_attracting_attention).
 cancion(we_dont_know_what_tomorrow_brings, a_light_for_attracting_attention). %completar don't  '
 cancion(skrting_on_the_surface, a_light_for_attracting_attention).
 
+
+cancion(somewhere_only_we_know, hopes_and_fears).
+cancion(bend_and_break, hopes_and_fears).
+cancion(we_might_as_well_be_strangers, hopes_and_fears).
+cancion(everybodys_changing, hopes_and_fears).   % Everybody's Changing  '
+cancion(your_eyes_open, hopes_and_fears).
+cancion(she_has_no_time, hopes_and_fears).
+cancion(cant_stop_now, hopes_and_fears).          % Can't Stop Now  '
+cancion(sunshine, hopes_and_fears).
+cancion(this_is_the_last_time, hopes_and_fears).
+cancion(untitled_1, hopes_and_fears).
+cancion(bedshaped, hopes_and_fears).
+%------------
+cancion(atlantic, under_the_iron_sea).
+cancion(is_it_any_wonder, under_the_iron_sea).   % Is It Any Wonder?
+cancion(nothing_in_my_way, under_the_iron_sea).
+cancion(leaving_so_soon, under_the_iron_sea).    % Leaving So Soon?
+cancion(a_bad_dream, under_the_iron_sea).
+cancion(hamburg_song, under_the_iron_sea).
+cancion(put_it_behind_you, under_the_iron_sea).
+cancion(the_iron_sea, under_the_iron_sea).
+cancion(crystal_ball, under_the_iron_sea).
+cancion(try_again, under_the_iron_sea).
+cancion(broken_toy, under_the_iron_sea).
+cancion(the_frog_prince, under_the_iron_sea). 
+
 cancion(solo_una_mujer, cuidado).
 cancion(una_manana, cuidado).
 cancion(se_agradecera, cuidado).
@@ -314,6 +389,152 @@ cancion(amoras, el_triste).
 cancion(a_partir_de_hoy, el_triste).
 cancion(dos, el_triste).
 
+cancion(asteroide, zoe).
+cancion(deja_te_conecto, zoe).
+cancion(miel, zoe).
+cancion(electricidad, zoe).
+cancion(razor_blade, zoe).
+cancion(beat_breaker, zoe).
+cancion(universo, zoe).
+cancion(conspirador, zoe).
+cancion(microscopio, zoe).
+cancion(infinito, zoe).
+cancion(random_time, zoe).
+cancion(tarantula, zoe).
+cancion(haze_girl, zoe).
+%---------
+cancion(peace_and_love, rocanlover).
+cancion(love, rocanlover).
+cancion(solo, rocanlover).
+cancion(tu, rocanlover).
+cancion(fotosintesis, rocanlover).
+cancion(veneno, rocanlover).
+cancion(frio, rocanlover).
+cancion(polar, rocanlover).
+cancion(rocanroler, rocanlover).
+cancion(whatever, rocanlover).
+cancion(mars_200, rocanlover).
+cancion(sonye, rocanlover).
+%---------
+cancion(memo_rex, memo_rex_comander_y_el_corazon_atomico_de_la_via_lactea).
+cancion(via_lactea, memo_rex_comander_y_el_corazon_atomico_de_la_via_lactea).
+cancion(vinyl, memo_rex_comander_y_el_corazon_atomico_de_la_via_lactea).
+cancion(no_me_destruyas, memo_rex_comander_y_el_corazon_atomico_de_la_via_lactea).
+cancion(corazon_atomico, memo_rex_comander_y_el_corazon_atomico_de_la_via_lactea).
+cancion(mrs_nitro, memo_rex_comander_y_el_corazon_atomico_de_la_via_lactea).
+cancion(nunca, memo_rex_comander_y_el_corazon_atomico_de_la_via_lactea).
+cancion(the_room, memo_rex_comander_y_el_corazon_atomico_de_la_via_lactea).
+cancion(paula, memo_rex_comander_y_el_corazon_atomico_de_la_via_lactea).
+cancion(human_space_volt, memo_rex_comander_y_el_corazon_atomico_de_la_via_lactea).
+cancion(triste_sister, memo_rex_comander_y_el_corazon_atomico_de_la_via_lactea).
+cancion(side_effects, memo_rex_comander_y_el_corazon_atomico_de_la_via_lactea).
+cancion(paz, memo_rex_comander_y_el_corazon_atomico_de_la_via_lactea).
+%---------
+cancion('10_am', programaton).
+cancion(camara_lenta, programaton).
+cancion(dos_mil_trece, programaton).
+cancion(fin_de_semana, programaton).
+cancion(arrullo_de_estrellas, programaton).
+cancion(ciudades_invisibles, programaton).
+cancion(panoramas, programaton).
+cancion(game_over_shanghai_liu_yang_river, programaton). % (liu_yang_river)
+cancion(andromeda, programaton).
+cancion(sedantes, programaton).
+cancion(altamar, programaton).
+%---------
+cancion(venus, aztlan).
+cancion(azul, aztlan).
+cancion(no_hay_mal_que_dure, aztlan).
+cancion(al_final, aztlan).
+cancion(hielo, aztlan).
+cancion(luci, aztlan).
+cancion(aztlan, aztlan).
+cancion(temor_y_temblor, aztlan).
+cancion(renacer, aztlan).
+cancion(ella_es_magia, aztlan).
+cancion(oropel, aztlan).
+cancion(clarividad, aztlan).
+%---------
+cancion(popular, sonidos_de_karmatica_resonancia).
+cancion(karmadame, sonidos_de_karmatica_resonancia).
+cancion(velur, sonidos_de_karmatica_resonancia).
+cancion(el_duelo, sonidos_de_karmatica_resonancia).
+cancion(skr, sonidos_de_karmatica_resonancia).
+cancion(cancion_de_cuna_para_marte, sonidos_de_karmatica_resonancia).
+cancion(tepoztlan, sonidos_de_karmatica_resonancia).
+cancion(fiebre, sonidos_de_karmatica_resonancia).
+cancion(ese_cuadro_no_me_pinta, sonidos_de_karmatica_resonancia).
+cancion(bestiario, sonidos_de_karmatica_resonancia).
+
+cancion(volver_a_ver, why_you).
+cancion(sacudeme, why_you).
+cancion(en_silencio, why_you).
+cancion(control, why_you).
+cancion(el_dia, why_you).
+cancion(colecciono_planetas, why_you).
+cancion(nube, why_you).
+cancion(nada, why_you).
+cancion(why_you, why_you).
+cancion(los_felices, why_you).
+cancion(fin, why_you).
+%---------
+cancion(la_verdad, naufrago).
+cancion(extranios, naufrago). %extraños
+cancion(domingo, naufrago).
+cancion(la_historia, naufrago).
+cancion(naufrago, naufrago).
+cancion(humo, naufrago).
+cancion(camaleon, naufrago).
+cancion(color, naufrago).
+cancion(el_poema_y_la_caja, naufrago).
+cancion(nunca_es_nunca, naufrago).
+cancion(mi_castillo_de_blanca_arena, naufrago).
+%---------
+cancion(el_aire, el_vuelo_del_pez).
+cancion(infinitos, el_vuelo_del_pez).
+cancion(bacalar, el_vuelo_del_pez).
+cancion(una_senal, el_vuelo_del_pez).
+cancion(el_deshielo, el_vuelo_del_pez).
+cancion(ecos_de_miel, el_vuelo_del_pez).
+cancion(al_anochecer, el_vuelo_del_pez).
+cancion(gota_a_gota, el_vuelo_del_pez).
+cancion(tonight, el_vuelo_del_pez).
+cancion(fogata, el_vuelo_del_pez).
+cancion(loco_con_caloncho, el_vuelo_del_pez).
+%---------
+cancion(ser_parte, unicos).
+cancion(tarde, unicos).
+cancion(camuflaje, unicos).
+cancion(camara, unicos).
+cancion(una_noche_tranquila, unicos).
+cancion(tus_pupilas, unicos).
+cancion(a_la_distancia, unicos).
+cancion(unicos, unicos).
+cancion(iman, unicos).
+cancion(el_chico, unicos).
+%---------
+cancion(algun_dia, memoria_futuro).
+cancion(pelicula, memoria_futuro).
+cancion(aves_del_tiempo, memoria_futuro).
+cancion(cada_vez_que_vuelvas, memoria_futuro).
+cancion(me_hace_falta, memoria_futuro).
+cancion(la_ciudad_feat_zoe, memoria_futuro).
+cancion(buscandote, memoria_futuro).
+cancion(respiro_feat_ximena_sarinana, memoria_futuro).
+cancion(vida, memoria_futuro).
+cancion(memoria_futuro, memoria_futuro).
+%---------
+cancion(brujula, 00_00).
+cancion(cardumenes, 00_00).
+cancion(paraiso_lunar, 00_00).
+cancion(00_00, 00_00).
+cancion(huracanes, 00_00).
+cancion(mapa_con_ana_torroja, 00_00).
+cancion('80_dias_con_carlos_sadness', 00_00).
+cancion(balsa, 00_00).
+cancion(suburbios, 00_00).
+cancion(no_es_antes_ni_es_despues, 00_00).
+
 %aqui van los me gusta
 meGusta(muse).
 meGusta(nirvana).
@@ -321,9 +542,3 @@ meGusta(absolution).
 meGusta(nevermind).
 meGusta(time_is_running_out). 
 meGusta(idioteque).
-
-
-
-
-
-

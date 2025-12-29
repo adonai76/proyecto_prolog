@@ -84,3 +84,23 @@ juntarCanciones(Lista) :- albumesRecomendados(Albumes),  %Esta funcion agarra ca
         ),
         ListaBruta
     ), sort(ListaBruta, ListaCasiLista), random_permutation(ListaCasiLista, Lista),!.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> master
