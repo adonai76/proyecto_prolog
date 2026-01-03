@@ -180,3 +180,34 @@ navidenasNoventa(Lista) :-
 		(member(Album, Albumes),
 			tag(navidenas, Album)),
 		Lista).
+
+%-------------------------------Me Gusta --------------------------------------
+%modificamos el archivo con la nueva informacion quee sta en memoria
+guardarHechos :-
+    tell('hechos.pl'),
+    listing(meGusta),
+    told.
+
+agregarMeGusta(X) :-
+    \+ meGusta(X),
+    assertz(meGusta(X)).
+
+%reglita para añadir elementos con asserts pero aqui solo lo almacena en memoria, no lo guarda aun.
+%recibimos el parametro del nuevo elemento  (chida pa ejecutar)
+like(X) :-
+    agregarMeGusta(X),
+    guardarHechos.
+
+
+%boorarr un meGusta de la base de memoria somalente
+eliminarMeGusta(X) :-
+    meGusta(X),
+    retract(meGusta(X)).
+
+
+% elimina un meGusta y actualiza el archivo de hechos.pl (chida pa ejecutar)
+dislike(X) :-
+    eliminarMeGusta(X),
+    guardarHechos.
+
+%---------------------------Fin Me Gusta ----------------------------
