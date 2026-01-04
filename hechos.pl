@@ -804,10 +804,3 @@ cancion(balsa, 00_00).
 cancion(suburbios, 00_00).
 cancion(no_es_antes_ni_es_despues, 00_00).
 
-%aqui van los me gusta
-meGusta(muse).
-meGusta(nirvana).
-meGusta(absolution).
-meGusta(nevermind).
-meGusta(time_is_running_out). 
-meGusta(idioteque).

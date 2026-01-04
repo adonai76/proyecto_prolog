@@ -185,7 +185,7 @@ navidenasNoventa(Lista) :-
 %-------------------------------Me Gusta --------------------------------------
 %modificamos el archivo con la nueva informacion quee sta en memoria
 guardarHechos :-
-    tell('hechos.pl'),
+    tell('like.pl'),
     listing(meGusta),
     told.
 
