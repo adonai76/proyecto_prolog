@@ -77,6 +77,7 @@ decada(dosmildiez, 2010, 2019).
 
 % album linkin park
 album(from_zero, 2024, linkin_park).
+album(hybrid_theory, 2000, linkin_park).
 % album imagine dragons 
 album(loom, 2024, imagine_dragons).
 %albumes de muse
@@ -167,7 +168,7 @@ genero(in_utero, punk_rock).
 genero(in_utero, noise_rock).
 
 genero(the_bends, alternative_rock).
-genero(the_bends, post-britpop).
+genero(the_bends, post_britpop).
 %------------
 genero(ok_computer, alternative_rock).
 genero(ok_computer, art_rock).
@@ -176,12 +177,12 @@ genero(kid_a, art_rock).
 genero(kid_a, electronica).
 genero(kid_a, experimental_rock).
 
-genero(the_colour_and_the_shape, post-grunge).
+genero(the_colour_and_the_shape, post_grunge).
 genero(the_colour_and_the_shape, alternative_rock).
 
 genero(a_light_for_attracting_attention, art_rock).
 genero(a_light_for_attracting_attention, electronica).
-genero(a_light_for_attracting_attention, post-punk).
+genero(a_light_for_attracting_attention, post_punk).
 genero(a_light_for_attracting_attention, progressive_rock).
 
 genero(hopes_and_fears, alternative_rock).
@@ -218,13 +219,13 @@ genero(el_triste, balada_romantica).
 genero(from_zero, alternative_metal).
 genero(from_zero, electronic_rock).
 genero(from_zero, nu_metal).
-genero(from_zero, nu_metal).
-
+genero(hybrid_theory,nu_metal).
 genero(loom, pop_rock).
 
 %tracklist de los albumes
 cancion(heavy_is_the_crown, from_zero).
 cancion(the_emptiness_machine, from_zero).
+cancion(in_the_end,hybrid_theory).
 
 cancion(take_me_to_the_beach, imagine_dragons).
 cancion(nice_to_meet_you, imagine_dragons).
